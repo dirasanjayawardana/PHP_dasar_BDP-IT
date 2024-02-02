@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($data["username"])) {
         session_start();
         $_SESSION["username"] = $data["username"];
-        $_SESSION["nama"] = $data["nama"];
+        $_SESSION["name"] = $data["name"];
 
         header("Location: http://localhost/bdpit2/profile.php");
     } else {

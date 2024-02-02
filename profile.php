@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $sql1->setQueryParameter($_SESSION["username"], $_POST["password"]);
     $data = $sql1->getQueryFetch();
 
-    $_SESSION["nama"] = $data["nama"];
+    $_SESSION["name"] = $data["name"];
 
     header("Location: http://localhost/bdpit2/profile.php");
 } else {

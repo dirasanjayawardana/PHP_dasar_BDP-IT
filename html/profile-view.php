@@ -10,7 +10,7 @@
     <div class="uk-container uk-container-small">
         <form method="post" action="http://localhost/bdpit2/profile.php">
             <h2 class="uk-margin">My Profile
-                <?php echo $_SESSION["nama"] ?>
+                <?php echo $_SESSION["name"] ?>
             </h2>
             <fieldset class="uk-fieldset">
                 <div class="uk-margin">

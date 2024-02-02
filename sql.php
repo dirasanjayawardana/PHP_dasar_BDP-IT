@@ -32,7 +32,7 @@ class SQL
                 $password,
             );
         } else {
-            $this->statement = $this->connection->prepare("UPDATE user SET nama = ?, password = ? WHERE username = ?");
+            $this->statement = $this->connection->prepare("UPDATE user SET name = ?, password = ? WHERE username = ?");
             $this->statement->bind_param(
                 "sss",
                 $name,
@@ -44,7 +44,7 @@ class SQL
         $this->statement->execute();
         // konversi hasil dari query SQL
         $result = $this->statement->get_result();
-        // mengubah ke asosiatifarray dengan index (nama kolom, value (hasil dari kolom))
+        // mengubah ke asosiatifarray dengan index (name kolom, value (hasil dari kolom))
         if (isset($result->num_rows)) {
             $this->fetch = $result->fetch_assoc();
         }
